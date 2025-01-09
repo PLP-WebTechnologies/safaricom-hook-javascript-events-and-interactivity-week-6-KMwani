@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <button id="togglebtn">Change color</button>
+  </div>
+
+  <div class="slider">
+        <br><br>
+    <p id="increased">This paragraph's font size can be changed using the slider below</p>
+    <br><br>
+
+    <input type="range" name="slider" id="fontslider" min="10" max="30" value="16">
+    <br><br>
+  </div>
+
+  <div id="modal">
+    <h3>fill in your details</h3>
+    <br>
+    <input type="text" name="" id="jina" placeholder="enter your name here">
+      <br><br><br>
+    <input type="email" name="" id="email" placeholder="enter your email">
+      <br><br><br>
+      <button id="closebtn">Close modal</button>
+      <br><br><br>
+  </div>
+
+  <div id="open">
+    <button id="openbtn">Open Modal</button>
+    <br><br>
+  </div>
+
+
+  <form id="assignform" action="/submit" method="post" novalidate>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <span id="nameError" style="color: red; display: none;">Name must be at least 3 characters long.</span>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <span id="emailError" style="color: red; display: none;">Please enter a valid email address.</span>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <span id="passwordError" style="color: red; display: none;">
+        Password must be at least 8 characters, include one uppercase letter and one number.
+    </span>
+
+    <label for="customMessage">Choose an option:</label>
+    <select id="customMessage" name="customMessage" onchange="showCustomMessage()">
+        <option value="">--Select an option--</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+    <p id="message" style="color: blue;"></p>
+
+    <input type="submit" value="Submit">
+</form>
+
+  <script src="script.js"></script>
+</body>
+</html>
